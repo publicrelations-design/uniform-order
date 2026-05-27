@@ -133,6 +133,8 @@ export default function App() {
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 3px; }
         .inp { width:100%; padding:12px 14px; border:1.5px solid rgba(255,255,255,0.15); border-radius:12px; background:rgba(255,255,255,0.08); color:#fff; font-family:'Sarabun',sans-serif; font-size:15px; outline:none; transition:border 0.2s, background 0.2s; }
+select.inp { background:#0F3D68 !important; color:#fff !important; -webkit-appearance:menulist !important; appearance:menulist !important; }
+select.inp:focus { background:#0F3D68 !important; }
         .inp::placeholder { color:rgba(255,255,255,0.4); }
         .inp:focus { border-color:#D4A017; background:rgba(255,255,255,0.12); }
         .inp.err { border-color:#ef4444; }
