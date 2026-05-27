@@ -209,24 +209,24 @@ export default function App() {
               <Field label="ชื่อ-นามสกุลนักเรียน *" error={errors.studentName}>
                 <input className={`inp ${errors.studentName?"err":""}`} placeholder="เช่น นายสมชาย ใจดี" value={form.studentName} onChange={e=>{set("studentName",e.target.value);clearErr("studentName")}} />
               </Field>
-              <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+              <div style={{display:"flex",flexDirection:"column",gap:12}}>
                 <Field label="ระดับชั้น *" error={errors.grade}>
-                  <select
-                    value={form.grade}
-                    onChange={e=>{set("grade",e.target.value);clearErr("grade")}}
-                    style={{...SEL_STYLE, borderColor: errors.grade ? "#ef4444" : "rgba(255,255,255,0.15)"}}>
-                    <option value="">เลือกชั้น</option>
-                    {GRADES.map(g=><option key={g} value={g}>{g}</option>)}
-                  </select>
+                  <div style={{display:"flex",flexWrap:"wrap",gap:8}}>
+                    {GRADES.map(g=>(
+                      <button key={g} type="button" onClick={()=>{set("grade",g);clearErr("grade")}} style={{padding:"10px 16px",borderRadius:10,border:`2px solid ${form.grade===g?"#D4A017":"rgba(255,255,255,0.2)"}`,background:form.grade===g?"rgba(212,160,23,0.2)":"rgba(255,255,255,0.05)",color:form.grade===g?"#D4A017":"#fff",fontFamily:"'Sarabun',sans-serif",fontSize:15,cursor:"pointer",fontWeight:form.grade===g?700:400}}>
+                        {g}
+                      </button>
+                    ))}
+                  </div>
                 </Field>
                 <Field label="ห้อง *" error={errors.room}>
-                  <select
-                    value={form.room}
-                    onChange={e=>{set("room",e.target.value);clearErr("room")}}
-                    style={{...SEL_STYLE, borderColor: errors.room ? "#ef4444" : "rgba(255,255,255,0.15)"}}>
-                    <option value="">เลือกห้อง</option>
-                    {ROOMS.map(r=><option key={r} value={r}>ห้อง {r}</option>)}
-                  </select>
+                  <div style={{display:"flex",flexWrap:"wrap",gap:8}}>
+                    {ROOMS.map(r=>(
+                      <button key={r} type="button" onClick={()=>{set("room",r);clearErr("room")}} style={{padding:"10px 16px",borderRadius:10,border:`2px solid ${form.room===r?"#D4A017":"rgba(255,255,255,0.2)"}`,background:form.room===r?"rgba(212,160,23,0.2)":"rgba(255,255,255,0.05)",color:form.room===r?"#D4A017":"#fff",fontFamily:"'Sarabun',sans-serif",fontSize:15,cursor:"pointer",fontWeight:form.room===r?700:400}}>
+                        ห้อง {r}
+                      </button>
+                    ))}
+                  </div>
                 </Field>
               </div>
               <Field label="เลขประจำตัวนักเรียน *" error={errors.studentId}>
