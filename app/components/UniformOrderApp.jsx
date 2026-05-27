@@ -519,7 +519,7 @@ function SuccessModal({name, uniformType}) {
           borderRadius:12,padding:"12px 20px",marginBottom:24,
           color:"rgba(255,255,255,0.6)",fontSize:13,lineHeight:1.6
         }}>
-          📞 สอบถามเพิ่มเติมได้ที่ฝ่ายงานพัสดุ<br/>โรงเรียนวรราชาทินัดดามาตุวิทยา
+         📞 สอบถามเพิ่มเติมได้ที่ครูคณัฐนันท์ (ห้องนาฏศิลป์)<br/>โรงเรียนวรราชาทินัดดามาตุวิทยา
         </div>
         <button onClick={()=>window.location.reload()} style={{
           background:"linear-gradient(135deg,#D4A017,#e8b520)",
