@@ -101,10 +101,11 @@ export default function App() {
         slipType,
         slipName: form.slipName
       };
-      await fetch(GAS_URL, {
+     await fetch(GAS_URL, {
         method: "POST",
         body: JSON.stringify(payload),
-        headers: { "Content-Type": "application/json" }
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" }
       });
       setSuccess(true);
     } catch(e) {
