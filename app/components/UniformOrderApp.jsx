@@ -137,6 +137,7 @@ export default function App() {
         .inp:focus { border-color:#D4A017; background:rgba(255,255,255,0.12); }
         .inp.err { border-color:#ef4444; }
         select.inp option { background:#0F3D68; color:#fff; }
+select.inp { appearance: auto; -webkit-appearance: auto; cursor:pointer; }
         .btn-primary { background:linear-gradient(135deg,#D4A017,#e8b520); color:#0F3D68; border:none; padding:16px 32px; border-radius:14px; font-size:16px; font-weight:700; font-family:'Sarabun',sans-serif; cursor:pointer; transition:transform 0.15s, box-shadow 0.15s; box-shadow:0 4px 20px rgba(212,160,23,0.4); width:100%; }
         .btn-primary:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(212,160,23,0.5); }
         .btn-primary:active { transform:translateY(0); }
