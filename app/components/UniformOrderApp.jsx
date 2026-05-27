@@ -233,14 +233,14 @@ select.inp { appearance: auto; -webkit-appearance: auto; cursor:pointer; }
                 <input className={`inp ${errors.studentName?"err":""}`} placeholder="เช่น นายสมชาย ใจดี" value={form.studentName} onChange={e=>{set("studentName",e.target.value);clearErr("studentName")}} />
               </Field>
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
-                <Field label="ระดับชั้น *" error={errors.grade}>
-                  <select className={`inp ${errors.grade?"err":""}`} value={form.grade} onChange={e=>{set("grade",e.target.value);clearErr("grade")}}>
+                <Field label="ระดับชั้น *" error={errors.grade}><select className={`inp ${errors.grade?"err":""}`} value={form.grade} onChange={e=>{set("grade",e.target.value);clearErr("grade")}} style={{WebkitAppearance:"menulist",appearance:"menulist",color:"white"}}>
+                  
                     <option value="">เลือกชั้น</option>
                     {GRADES.map(g=><option key={g} value={g}>{g}</option>)}
                   </select>
                 </Field>
                 <Field label="ห้อง *" error={errors.room}>
-                  <select className={`inp ${errors.room?"err":""}`} value={form.room} onChange={e=>{set("room",e.target.value);clearErr("room")}}>
+                  <select className={`inp ${errors.room?"err":""}`} value={form.room} onChange={e=>{set("room",e.target.value);clearErr("room")}} style={{WebkitAppearance:"menulist",appearance:"menulist",color:"white"}}>
                     <option value="">เลือกห้อง</option>
                     {ROOMS.map(r=><option key={r} value={r}>ห้อง {r}</option>)}
                   </select>
