@@ -13,7 +13,7 @@ const DEPOSIT = 1000;
 const GRADES = ["ป.4","ป.5","ป.6","ม.1","ม.2","ม.3","ม.4","ม.5","ม.6"];
 const ROOMS = ["1","2","3","4","5","6","7","8"];
 
-const GAS_URL = "https://script.google.com/macros/s/AKfycbx2MdbGNDqMnJszIyW_GKaHI9H21tDVWXtbF6CYM1mMShhZdRvogUEqwdArq1rTxpJIMQ/exec";
+const GAS_URL = "https://script.google.com/macros/s/AKfycbxXGnNPwLJEAwFOj5yRN-K5SQlOb-o7MGCzRDGBFFqyFz3tMC3i3QDXJPKW4B-U66NBNQ/exec";
 
 const steps = ["ข้อมูลนักเรียน","เลือกชุด","การชำระ","สรุป & ส่ง"];
 
